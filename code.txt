@@ -337,3 +337,53 @@ function fun2(){
 </body>
 
 </html>
+
+// count char, words and lines
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Enter charector,words and lines</h1>
+    <textarea id="area" type="textarea" style="width: 300px; height: 200px"></textarea>
+    <button onclick="countchar()">count char</button>
+    <button onclick="countWords()">count words</button>
+    <button onclick="countLines()">count lines</button>
+
+
+    <script>
+
+        function countchar() {
+            var str = document.getElementById("area").value;
+            // console.log("char");
+            var regex = /[a-zA-Z0-9]/g; // only count letters and numbers
+            var c = str.match(regex).length;
+            alert("total number of char is " + c);
+        }
+        function countWords() {
+            var str = document.getElementById("area").value;
+            // console.log("words");
+            const arr = str.split(' ');
+
+            var w = arr.filter(word => word !== '').length;
+            alert("total number of words is " + w);
+        }
+
+        function countLines() {
+            var str = document.getElementById("area").value;
+            // console.log("lines");
+            var regex = /[\r\n|\r|\n]/g;
+            var arr = str.match(regex).length;
+            arr += 1;
+            alert("total number of lines is " + arr);
+        }
+    </script>
+</body>
+
+</html>
