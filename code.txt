@@ -259,3 +259,50 @@ function fun2(){
 </body>
 
 </html>
+
+// find the gift
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Find the gift!</h1>
+    <h2>Enter any location from 3 to 8</h2>
+    <input type="text" id="txt" value="0" />
+    <button id="btn" onclick="game()">Check</button>
+    <p id="result"></p>
+
+    <script>
+
+        function game() {
+            var x = document.getElementById("txt").value;
+            var y = getRandomIntInclusive(3, 8);
+            console.log(y);
+            if (x == y) {
+                document.getElementById("result").innerHTML = "Congts you find the gift.";
+            }
+            else {
+                document.getElementById("result").innerHTML = "opp!! try again.";
+                document.getElementById("txt").value = 0;
+            }
+
+
+        }
+
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+        }
+
+    </script>
+</body>
+
+</html>
