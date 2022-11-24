@@ -387,3 +387,48 @@ function fun2(){
 </body>
 
 </html>
+
+//limit char using jquery
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<body style="text-align: center;">
+
+
+
+    <h1>
+        Type in the textbox to
+        automatically count the words left and not allowed to type more then 60 charector
+    </h1>
+
+
+
+    <textarea id="word" oninput="countWord()" rows="10" cols="60">
+    </textarea>
+    <br><br>
+
+
+    <p id="cont"> Word left
+    </p>
+
+
+
+    <script>
+
+        $('textarea').keypress(function (e) {
+            var tval = $('textarea').val(),
+                tlength = tval.length,
+                set = 60,
+                remain = parseInt(set - tlength);
+            $('p').text(remain);
+            if (remain <= 0 && e.which !== 0 && e.charCode !== 0) {
+                $('textarea').val((tval).substring(0, tlength - 1));
+                return false;
+            }
+        })
+
+    </script>
+</body>
+
+</html>
