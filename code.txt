@@ -81,3 +81,69 @@
 </body>
 
 </html>
+
+
+//table text colour change over hover
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 5px solid black;
+            border-color: red;
+            width: 50%;
+            border-radius: 5px;
+            background-color: #a8ddfa;
+        }
+
+        .cet {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #fi {
+            text-align: center;
+            background-color: #90be34;
+        }
+
+        tr:hover {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cet">
+        <table>
+            <tr id="fi">
+                <td>
+                    <h2>Css </h2>
+                </td>
+            </tr>
+            <tr>
+                <td>HTML</td>
+            </tr>
+            <tr>
+                <td>javaScript</td>
+            </tr>
+            <tr>
+                <td>angular</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
