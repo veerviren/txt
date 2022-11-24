@@ -147,3 +147,44 @@
 </body>
 
 </html>
+
+// mouseover event to get random number
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<div id="myDIV">
+    <p>Mouse over this rectangle, and get the coordinates of your mouse pointer.</p>
+    <button id="but" onclick="fun2()">Remove</button>
+</div>
+
+
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myDIV").addEventListener("mousemove", myfunction);
+
+
+function myfunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+function fun2(){
+    document.getElementById("myDIV").removeEventListener("mousemove",myfunction);
+}
+</script>
+
+</body>
+</html>
+
