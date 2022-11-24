@@ -459,3 +459,7 @@ function fun2(){
 </body>
 
 </html>
+
+
+//multiple pages in angular
+https://jasonwatmore.com/post/2019/04/29/angular-7-tutorial-part-3-add-routing-multiple-pages
