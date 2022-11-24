@@ -432,3 +432,30 @@ function fun2(){
 </body>
 
 </html>
+
+//enable disable submit button using jquery
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<body>
+    <input id="txt" type="text" name="textField" />
+    <input id="sub" type="submit" value="send" />
+    <script>
+        $(document).ready(function () {
+            $("#sub").prop('disabled', true);
+            $('#txt').keyup(function () {
+                if ($(this).val() != '') {
+                    $(':input[type="submit"]').prop('disabled', false);
+                }
+            });
+            $('#txt').keyup(function () {
+                if ($(this).val() == '') {
+                    $(':input[type="submit"]').prop('disabled', true);
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
